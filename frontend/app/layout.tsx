@@ -6,6 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://corenextproject.vercel.app'),
   title: 'CoreNext Project - Final Year Projects, Journal Publishing & Hardware Projects',
   description:
     'Get ready-made final year project guidance, research paper publishing support, and hardware project implementation help. Expert assistance for AI/ML, Cloud, Web, IoT, and more.',
