@@ -97,7 +97,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <div>📞 +91 9360056977</div>
               <div>✉️ techcorenext@gmail.com</div>
-              <div>📍 Available Online — Pan India</div>
+              <div>📍 Sri Balaji Nagar, Chennai, Tamil Nadu 600077</div>
             </div>
             <a
               href="https://wa.me/+919360056977?text=Hi%20I%20need%20help%20with%20my%20project"

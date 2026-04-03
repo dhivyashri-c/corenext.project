@@ -98,7 +98,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-500">Location</div>
-                  <div className="font-medium">Available Online — Pan India</div>
+                  <div className="font-medium">Sri Balaji Nagar, Chennai, Tamil Nadu 600077</div>
                 </div>
               </div>
             </div>
