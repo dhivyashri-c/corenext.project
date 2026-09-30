@@ -6,6 +6,7 @@ import PublishingSection from '@/components/PublishingSection'
 import HardwareSection from '@/components/HardwareSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Testimonials from '@/components/Testimonials'
+import BlogSection from '@/components/BlogSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
@@ -21,6 +22,7 @@ export default function Home() {
       <HardwareSection />
       <WhyChooseUs />
       <Testimonials />
+      <BlogSection />
       <ContactSection />
       <Footer />
       <WhatsAppFloat />

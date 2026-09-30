@@ -1,9 +1,13 @@
 'use client'
 
+import Link from 'next/link'
 import { GraduationCap, Github, Linkedin, Instagram, Twitter, MessageCircle } from 'lucide-react'
 
 const scrollTo = (id: string) => {
-  document.getElementById(id.replace('#', ''))?.scrollIntoView({ behavior: 'smooth' })
+  const el = document.getElementById(id.replace('#', ''))
+  // Section anchors only exist on the home page; elsewhere navigate there.
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  else window.location.href = `/${id}`
 }
 
 const quickLinks = [
@@ -11,6 +15,7 @@ const quickLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Publishing', href: '#publishing' },
   { label: 'Hardware', href: '#hardware' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -63,12 +68,18 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => scrollTo(link.href)}
-                    className="text-gray-400 hover:text-purple-400 text-sm transition-colors"
-                  >
-                    {link.label}
-                  </button>
+                  {link.href.startsWith('/') ? (
+                    <Link href={link.href} className="text-gray-400 hover:text-purple-400 text-sm transition-colors">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => scrollTo(link.href)}
+                      className="text-gray-400 hover:text-purple-400 text-sm transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
